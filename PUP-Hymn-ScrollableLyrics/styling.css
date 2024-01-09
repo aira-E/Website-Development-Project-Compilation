@@ -1,0 +1,150 @@
+@font-face 
+{
+    font-family: font-display;
+    src: url(fonts/DKLongreach.otf);
+}
+
+@font-face 
+{
+    font-family: font-bold;
+    src: url(fonts/lyrics.ttf);
+}
+
+@font-face {
+    font-family: font-thin;
+    src: url(fonts/Garet-Book.ttf);
+}
+.Upper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo
+{
+    width: 100px;
+    height: 100px; 
+    margin: 10px;
+}
+
+#title
+{
+    font-family: font-display;
+    font-size: 50px;
+    color: #800000;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.Middle
+{
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+    margin-bottom: 3%;
+}
+
+#hymn
+{
+    font-family: font-bold;
+    font-size: 230%;
+    color: #800000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    animation: scroll 180s linear 1; 
+    animation-play-state: paused;
+    padding-top: 20%;
+    padding-bottom: 100%;
+}
+
+@keyframes scroll
+{  
+    0% {transform: translateY(0%);}
+  100% {transform: translateY(-100%);}    
+}
+
+button
+{
+    color: white;
+    font-size: 27px;
+    font-family: font-bold;
+    line-height: 60px;
+    min-width: 160px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #800000;
+    border-radius: 8px;
+    border: 0px;
+    margin-bottom: 20px;
+}
+
+.Lower
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright
+{
+    font-family: font-thin;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    background-color: #800000;
+    height: 5%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    left: 0px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .Upper
+    {
+        padding-top: 5%;
+    }
+    #title
+    {
+        font-size: 13px;
+    }
+    #logo
+    {
+        width: 50px;
+        height: 50px; 
+    }
+    .Middle
+    {
+        height: 450px;
+    }
+    #hymn
+    {
+        font-size: 110%;
+        padding-top: 100%;
+    }
+    button
+    {
+        font-size: 15px;
+        line-height: 20px;
+        min-width: 120px;
+        padding: 10px;
+        display: block;
+    }
+    #copyright
+    {
+        font-size: 65%;
+        height: 3%;
+        margin-bottom: 2%;
+    }
+
+}

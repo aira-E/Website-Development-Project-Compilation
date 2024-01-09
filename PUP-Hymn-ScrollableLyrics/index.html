@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href = "styling.css">
+    <link rel="icon" type="image/x-icon" href="sources/PUPLogo.ico" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP Hymn</title>
+    <body style="background: url('sources/backg.png') no-repeat center/cover fixed;">
+</head>
+
+<body>
+    <div class="Upper">
+        <img id= logo src= "sources/PUPLogo.png"  width="100" height="100" style="margin: 10px;">
+        <p id= "title"> Polytechnic University of the Philippines Hymn</p>
+    </div>
+    
+    <div class="Middle">
+        <p id= "hymn">
+            <br>
+            <br>
+            <br>
+            Sintang Paaralan
+            <br> Tanglaw ka ng bayan
+            <br> Pandayan ng isip ng kabataan
+            <br> Kami ay dumating nang salat sa yaman
+            <br> Hanap na dunong ay iyong alay
+            <br> Ang layunin mong makatao
+            <br> Dinarangal ang Pilipino
+            <br> Ang iyong aral, diwa, adhikang taglay
+            <br> PUP, aming gabay
+            <br> Paaralang dakila
+            <br> PUP, pinagpala
+            <br> Gagamitin ang karunungan
+            <br> Mula sa iyo, para sa bayan
+            <br> Ang iyong aral, diwa, adhikang taglay
+            <br> PUP, aming gabay
+            <br> Paaralang dakila
+            <br> PUP, pinagpala
+        </p>
+    </div>
+
+    <div class="Lower">
+        <audio id="audio">
+            <source src="sources/puphymn.mp3" type="audio/mpeg">
+            <source src="sources/puphymn.ogg" type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <button id="playPauseBTN" onclick="playPause()"> &#9658 </button>
+    </div>
+
+    <footer>
+        <a id= copyright href="https://www.pup.edu.ph/about/hymn"  target="_blank" > &copy; Polytechnic University of the Philippines Hymn </a>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
