@@ -1,0 +1,44 @@
+
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container 
+{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.data_container
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.encryptionlvl_container
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+button
+{
+    margin: 5px;    
+    padding: 5px;
+}

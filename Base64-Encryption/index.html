@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href = "srcs/style.css">-->
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1> CMPE 40052: </h1>
+        <h1> Laboratory Activity - Data Encryption </h1>
+        <p> BSCOE 3-1 </p>
+        <p> Amad, Harold P.</p>
+        <p> Estur, Aira A. </p>
+        <h2> Input Data: </h2>
+        <div class="data_container">
+            <div class="">
+                <form action="" method="post">
+                    <textarea name="data" id="data" rows="4" cols="50" required></textarea>
+                    <br>
+                </form>
+            </div>
+            <div class="">
+                <form action="" method="post">
+                    <textarea name="ddata" id="ddata" rows="4" cols="50" required></textarea>
+                    <br>
+                </form>
+            </div>
+            
+        </div>
+
+        <button id="btn_encrypt" onclick="convertenc()"> Encrypt </button>
+        <button id="btn_decrypt" onclick="convertdnc()"> Decrypt </button>
+
+
+
+        <div class="data_container">
+            <div class="">
+                <h2> Encrypted Data </h2>
+                <textarea name="data" id="encrypted_data" rows="4" cols="50" required></textarea>
+            </div>
+            <div class="">
+                <h2> Decrypted Data </h2>
+                <textarea name="data" id="decrypted_data" rows="4" cols="50" required></textarea>
+            </div>
+        </div>
+        
+        <div class="encryptionlvl_container">
+            <h3 id="encryptionlvl"> Encryption Level: </h3>
+            <p id="encryptedlvl"> </p>
+        </div>
+    </div>
+
+    <style>       
+        body 
+        {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container 
+        {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .data_container
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .encryptionlvl_container
+        {
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        button
+        {
+            margin: 5px;    
+            padding: 5px;
+        }
+    </style>
+
+    <script> 
+        let names = ["Aira", "Harry", "Jay"]
+        let password = ["Aira_123","Harry_123","Jay_123" ]
+        let gender = ["male","female"]
+
+        const data = document.getElementById("data");
+        const ddata = document.getElementById("ddata");
+
+
+
+        function convertenc () {
+            var output = btoa(data.value);
+            document.getElementById("encrypted_data").value = output;
+                    // Create an array to store ages from 1 to 100
+        const ageDataset = [];
+
+        // Populate the array with ages from 1 to 100
+            for (let age = 1; age <= 100; age++) {
+            ageDataset.push(age.toString());
+            }
+
+            // Print the dataset to the console
+            console.log(ageDataset);
+            if (names.includes(data.value)) {
+                document.getElementById("encryptedlvl").innerHTML = "Low";
+            }
+            else if (password.includes(data.value)) {
+                document.getElementById("encryptedlvl").innerHTML = "High";
+            }
+            else if (gender.includes(data.value)) {
+                document.getElementById("encryptedlvl").innerHTML = "Mid";
+            }
+            else if (ageDataset.includes(data.value)) {
+                document.getElementById("encryptedlvl").innerHTML = "Mid";
+            }
+            else {
+                document.getElementById("encryptedlvl").innerHTML = "Not in the data set";
+            }
+
+        }
+
+        function convertdnc () {
+            var outputd = atob(ddata.value);
+            document.getElementById("decrypted_data").value = outputd;
+        }
+    </script>
+
+</body>
+</html>
